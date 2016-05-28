@@ -20,16 +20,34 @@
         margin-top: 40%;
       }
       body{
-        background-image: url(img/bg.jpg);
-        background-size: 100%;
+        background-repeat: no-repeat;
         padding-right: 25px;
+        background-image: url(images/bg.jpg);
+        background-size: 100% 100%;
+      }
+      #start{
+        background-image: url(images/zhua.jpg);
+        background-size: 150px 150px;
+        display:block; 
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        box-shadow: 0px 0px 10px #aaa;
+        margin-top: 120px;
+        margin-left: 27%;
+      }
+      #start span{
+        display:block; 
+        padding-top: 80px;
+        padding-left: 5px;
+        color: white;
       }
     </style>
     
   </head>
-  <body>
+  <body id="body">
     <div id="sPage">
-      <button class="btn" id="start">START!</button><br/>
+      <span id="start"><span>START!</span></span><br/>
     </div>
     <div class="scene" id="cj1" style="display:none;">
       <p>睡不着了。睡不着了。<br/>每天12点就让人睡觉，大好时光都被荒废了！<br>铲屎的还在睡么？</p>
@@ -113,6 +131,9 @@
   <script src="javascripts/bootstrap.min.js"></script>
   <script>
     $(document).ready(function() {
+      var vph = $(window).height();
+      console.log(vph);
+      $("#body").height(vph);
       $("#start").click(function(){
         $("#sPage").fadeOut('slow',function(){
           $("#cj1").fadeIn('slow');
