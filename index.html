@@ -160,14 +160,25 @@
       <button class="btn" id="cj11a"></button> 我看那你张餐巾纸味道应该不错，我先吃点垫一垫！<br><br>
       <button class="btn" id="cj11b"></button> 狠心的人类！我去阳台了，别拦着我，让孤度的风吹干我的泪水吧！
     </div>
+    <span style="display:none" id="loading">
+      <img id="l1" src="#" />
+      <img id="l2" src="#" />
+      <img id="l3" src="#" />
+      <img id="l4" src="#" />
+      <img id="l5" src="#" />
+    </span>
 
   </body>
   <script src="javascripts/jquery-2.2.4.min.js"></script>
   <script src="javascripts/bootstrap.min.js"></script>
   <script>
     $(document).ready(function() {
+      $("#l1").attr("src","images/bg2.png");
+      $("#l2").attr("src","images/die.jpeg");
+      $("#l3").attr("src","images/girl.jpg");
+      $("#l4").attr("src","images/hp.jpg");
+      $("#l5").attr("src","images/yh.jpg");
       var vph = $(window).height();
-      console.log(vph);
       $("#body").height(vph);
       $("#start").click(function(){
         $("#sPage").fadeOut('slow',function(){
