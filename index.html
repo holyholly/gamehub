@@ -10,10 +10,11 @@
         width: 80%;
       }
       #sPage,.scene{
+        padding-top: 15px;
         
       }
       .scene p{
-        margin-top: 50px;
+        margin-top: 15px;
         font-weight: bold;
         color: #333;
         font-size: 16px;
@@ -21,6 +22,25 @@
         border-radius: 15px;
         padding: 20px;
         margin-bottom: 30px;
+      }
+      .over{
+        text-align: center;
+        font-size: 18px;
+      }
+      .scene.over p{
+        margin-top: 15px;
+        font-weight: normal;
+        color: #000;
+        font-size: 20px;
+        line-height: 25px;
+        background-color: rgba(150,150,100,0.6);
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 30px;
+      }
+      .over .os{
+        display: none;
+        text-shadow: 0px 0px 5px #000;
       }
       #sPage button{
         margin-top: 40%;
@@ -49,6 +69,7 @@
         height: 50px;
         border-radius: 25px;
         box-shadow: 0px 0px 5px #aaa;
+        margin-right: 10px;
       }
       #start span{
         display:block; 
@@ -64,12 +85,12 @@
       <span id="start"><span>START!</span></span><br/>
     </div>
     <div class="scene" id="cj1" style="display:none;">
-      <p>睡不着了。睡不着了。每天12点就让人睡觉，大好时光都被荒废了！铲屎的还在睡么？</p>
+      <p>睡不着了。睡不着了。7点还不起床，大好时光都被荒废了！铲屎的还在睡么？</p>
       <button class="btn" id="cj1a"></button> 算了，让他再睡会吧<br/><br/>
       <button class="btn" id="cj1b"></button> 快给爷起来，爷要用早膳了！爷要拉屎尿尿！
     </div>
     <div class="scene" id="cj2" style="display:none;">
-      <p>10分钟过去了铲屎的怎么还毫无反应啊！什么情况！<br/>早上好啊铲屎的<br>吃饭吃饭！<br/>突然觉得体内废物堆积过量了！</p>
+      <p><i style="font-weight: normal; line-height:13px;">10分钟后...<br/><br/></i>早上好啊铲屎的！<br>吃饭吃饭！<br/>突然觉得体内废物堆积过量了！</p>
       <button class="btn" id="cj2a"></button> 快去阳台解决一下，顺便看看今天天气如何！<br><br/>
       <button class="btn" id="cj2b"></button> 我要是走了，铲屎的肯定会对我的食物动手脚！就这里解决吧！
     </div>
@@ -89,18 +110,18 @@
       <button class="btn" id="cj5a"></button> 让小爷去偷几张餐巾纸，用他们来发泄小爷心中的怒火！<br><br/>
       <button class="btn" id="cj5b"></button> 你牛呗！你咋不上天呢！我要去默默的看着窗外，独自感受这份凄凉了。
     </div>
-    <div class="scene" id="over1" style="display:none;">
-      <p>我仿佛看到铲屎的在google狗肉的100种做法了。还给二郎妈说晚上要吃卤肉。<br/>今天的洗澡水有点烫<br>今天沐浴露闻怎么是粉状的，居然叫十三香这么土的名字<br/><b>GAME OVER!</b></p>
-      <button class="btn gameover"></button> 铲屎的我们再来大战三百回合!
+    <div class="scene over" id="over1" style="display:none;">
+      <p style="color:white;">我仿佛看到铲屎的在google狗肉的100种做法了。还给二郎妈说晚上要吃卤肉。<br/>今天的洗澡水有点烫<br>今天沐浴露闻怎么是粉状的，居然叫十三香这么土的名字<br/><b>GAME OVER!</b></p>
+      <span class="os" style="color:white;"><button class="btn gameover"></button> <br><br>铲屎的我们再来大战<br>三！百！回！合！</span>
     </div>
     <div class="scene" id="cj6" style="display:none;">
       <p>铲屎的果然被我的忧郁气质所打动了！<br/>这是要带我出去玩啊！！<br>等下，这是什么鬼东西！</p>
       <button class="btn" id="cj6a"></button> 想让我带狗链？门都没有啊！小爷骨子里流淌着的是热爱自由的狗血！<br><br>
       <button class="btn" id="cj6b"></button> 好狗不吃眼前亏，小爷能屈能伸！走着。
     </div> 
-    <div class="scene" id="over2" style="display:none;">
-      <p>花园里风景很不错啊！<br/>那边那只藏獒姑娘，让我们一起摇摆吧！<br><b>哇哈哈哈哈哈哈！小爷会照顾你的！</b></p>
-      <button class="btn gameover"></button> <br>这样的结果才是我想要的！哈哈哈，要不在试试别的
+    <div class="scene over" id="over2" style="display:none;">
+      <p style="background-color:pink;">花园里风景很不错啊！<br/>那边那只藏獒姑娘，<br>让我们一起摇摆吧！<br><b>哇哈哈哈哈哈！<br>小爷会照顾你的！</b></p>
+      <span class="os"><button class="btn gameover"></button> <br><br>这样的结果才是我想要的！<br>哈哈哈，要不在试试别的</span>
     </div>
     <div class="scene" id="cj7" style="display:none;">
       <p>你这个骗子！我还以为要出去玩呢！<br/>居然只是在楼道里跑50米折返跑！</p>
@@ -112,31 +133,31 @@
       <button class="btn" id="cj8a"></button> 哎呦！你这小短裤不错啊，来给爷看看，给爷看看啊<br><br>
       <button class="btn" id="cj8b"></button> 我就这么静静的在门口等着你，你去换衣服吧
     </div>
-    <div class="scene" id="over3" style="display:none;">
-      <p>哇哈哈哈哈<br/>小爷略施小计，就获得了自由出门的机会！你上当了！<br>我要去和我的藏獒小女友过没羞没臊的生活了，我会回来看你的。<br/><b>再见啊铲屎的！</b></p>
-      <button class="btn gameover"></button> <br><br>铲屎的让我重新来一次吧，我觉得她并不是我喜欢的那种类型的女生。让!我!重!来！
+    <div class="scene over" id="over3" style="display:none;">
+      <p>哇哈哈哈哈<br/>小爷略施小计，就获得了自由出门的机会！你上当了！<br>我要去和我的二哈小女友过没羞没臊的生活了，我会回来看你的。<br/><b>再见啊！铲屎的！</b></p>
+      <span class="os" style="color:white;"><button class="btn gameover"></button> <br><br>我觉得她并不是我喜欢的那种类型的女生。让！我！重！来！</span>
     </div>
-    <div class="scene" id="over4" style="display:none;">
-      <p>我不就咬了你裤子几口么？<br/>我们的relationship就破裂了？<br><b>你干嘛！干嘛把我关起来！</b></p>
-      <button class="btn gameover"></button><br><br>放我出来！你就这样走了么！我不想睡觉！！不要！！！
+    <div class="scene over" id="over4" style="display:none;">
+      <p style="color:white;">我不就咬了你裤子几口么？<br/>我们的relationship就破裂了？<br><b>你干嘛！干嘛把我关起来！<br>放我出来！你就这样走了么！</b></p>
+      <span class="os" style="color:white;"><button class="btn gameover"></button><br><br>我不想睡觉！再来一次！！！</span>
     </div>
     <div class="scene" id="cj9" style="display:none;">
       <p>我就是觉得这块瓷砖我很喜欢，想标记一下而已！<br/>你就不听我解释一下么！是瓷砖逼我尿的！<br>你居然把我关起来1个小时！</p>
       <button class="btn" id="cj9a"></button>我去阳台尿可以了吧！<br><br>
       <button class="btn" id="cj9b"></button>你看你看，这次我没使劲，真的是瓷砖逼我尿呢，你看。。。
     </div>
-    <div class="scene" id="over5" style="display:none;">
-      <p>真的不怪我！<br/>你干什么！你给宠物医院打电话是什么居心！<br>结！扎！是什么意思！<br/><b>听我解释！！！！</b></p>
-      <button class="btn btn-danger gameover"></button><br>我不要结扎！我是独生子女！！不。。。要。。。。
+    <div class="scene over" id="over5" style="display:none;">
+      <p style="color:white;">真的不怪我！<br/>你干什么！你给宠物医院打电话是什么居心！<br>结！扎！是什么意思！<br/>听我解释！！！！<br>我是独生子女！！<br>不。。。要。。。。</p>
+      <span class="os" style="color:white;"><button class="btn gameover"></button> 我不要结扎！我要重来</span>
     </div>
     <div class="scene" id="cj10" style="display:none;">
       <p>铲屎的！我都叫了你一个小时了！<br/>你是故意装作听不见的吧！</p>
-      <button class="btn" id="cj10a"></button> 好吧，吃饭时主要的。看着我无辜的眼神，快看我！<br><br>
+      <button class="btn" id="cj10a"></button> 好吧，吃饭是主要的。看着我无辜的眼神，快看我！<br><br>
       <button class="btn" id="cj10b"></button> 起来起来！你不起来我是不会停下来的！！！
     </div>
     <div class="scene" id="cj11" style="display:none;">
       <p>我不过是早上叫了你一下！<br/>你居然就不给我吃早饭！！</p>
-      <button class="btn" id="cj11a"></button> 我看那你张餐巾纸味道应该不错，我先去垫一垫！<br><br>
+      <button class="btn" id="cj11a"></button> 我看那你张餐巾纸味道应该不错，我先吃点垫一垫！<br><br>
       <button class="btn" id="cj11b"></button> 狠心的人类！我去阳台了，别拦着我，让孤度的风吹干我的泪水吧！
     </div>
 
@@ -157,7 +178,7 @@
       $("#cj1a").click(function(){
         $("#cj1").fadeOut('slow',function(){
           $("#cj2").fadeIn('slow');
-        }); 
+        });
       });
       $("#cj1b").click(function(){
         $("#cj1").fadeOut('slow',function(){
@@ -191,17 +212,23 @@
       });
       $("#cj5a").click(function(){
         $("#cj5").fadeOut('slow',function(){
-          $("#over1").fadeIn('slow');
+          $("#over1").fadeIn('slow');//hotpot
+          $("#body").css("background-image","url(images/hp.jpg)");
+          $("#over1 .os").delay(1500).fadeIn('slow');
         }); 
       });
       $("#cj8a").click(function(){
         $("#cj8").fadeOut('slow',function(){
-          $("#over4").fadeIn('slow');
+          $("#over4").fadeIn('slow');//lock
+          $("#body").css("background-image","url(images/die.jpeg)");
+          $("#over4 .os").delay(1500).fadeIn('slow');
         }); 
       });
       $("#cj8b").click(function(){
         $("#cj8").fadeOut('slow',function(){
-          $("#over3").fadeIn('slow');
+          $("#over3").fadeIn('slow');//girl
+          $("#body").css("background-image","url(images/girl.jpg)");
+          $("#over3 .os").delay(1500).fadeIn('slow');
         }); 
       });
       $("#cj4a").click(function(){
@@ -226,7 +253,9 @@
       });
       $("#cj6b").click(function(){
         $("#cj6").fadeOut('slow',function(){
-          $("#over2").fadeIn('slow');
+          $("#over2").fadeIn('slow');//good
+          $("#body").css("background-image","url(images/yh.jpg)");
+          $("#over2 .os").delay(1500).fadeIn('slow');
         }); 
       });
       $("#cj7a").click(function(){
@@ -246,7 +275,9 @@
       });
       $("#cj9b").click(function(){
         $("#cj9").fadeOut('slow',function(){
-          $("#over5").fadeIn('slow');
+          $("#over5").fadeIn('slow');//jiezha
+          $("#body").css("background-image","url(images/die.jpeg)");
+          $("#over5 .os").delay(1500).fadeIn('slow');
         }); 
       });
       $("#cj10a").click(function(){
@@ -261,7 +292,9 @@
       });
       $("#cj11a").click(function(){
         $("#cj11").fadeOut('slow',function(){
-          $("#over1").fadeIn('slow');
+          $("#over1").fadeIn('slow');//hotpot
+          $("#body").css("background-image","url(images/hp.jpg)");
+          $("#over1 .os").delay(1500).fadeIn('slow');
         }); 
       });
       $("#cj11b").click(function(){
@@ -270,8 +303,9 @@
         }); 
       });
       $("button.gameover").click(function(){
-        $(this).parent().fadeOut('slow',function(){
-          $("#cj1").fadeIn('slow');
+        $(this).parent().parent().fadeOut('slow',function(){
+          $("#sPage").fadeIn('slow');
+          $("#body").css("background-image","url(images/bg.jpg)");
         }); 
       });
     });
